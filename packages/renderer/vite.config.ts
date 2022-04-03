@@ -1,3 +1,6 @@
+/// <reference types="vitest" />
+/// <reference types="vite/client" />
+
 import { join } from 'path'
 import { defineConfig } from 'vite'
 import pkg from '../../package.json'
@@ -19,5 +22,10 @@ export default defineConfig({
     alias: {
       '@': join(__dirname, 'src'),
     },
+  },
+  // vitest configuration https://vitest.dev/config/#configuration
+  test: {
+    globals: true,
+    environment: 'jsdom',
   },
 })

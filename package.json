@@ -10,7 +10,9 @@
   "scripts": {
     "dev": "node scripts/watch.mjs",
     "build": "node scripts/build.mjs && electron-builder",
-    "init": "git config core.hooksPath .git/hooks/ && rm -rf .git/hooks && npx simple-git-hooks"
+    "init": "git config core.hooksPath .git/hooks/ && rm -rf .git/hooks && npx simple-git-hooks",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "serialport": "^10.4.0",
@@ -27,13 +29,15 @@
     "eslint-plugin-vue": "^8.5.0",
     "execa": "^6.1.0",
     "file-type": "^17.1.1",
+    "jsdom": "^19.0.0",
     "move-file": "^3.0.0",
     "nano-staged": "^0.6.0",
     "node-fetch": "^3.2.3",
     "simple-git-hooks": "^2.7.0",
     "typescript": "^4.6.2",
     "vite": "^2.8.6",
-    "vite-plugin-esmodule": "^1.2.0"
+    "vite-plugin-esmodule": "^1.2.0",
+    "vitest": "^0.8.4"
   },
   "env": {
     "VITE_DEV_SERVER_HOST": "127.0.0.1",
