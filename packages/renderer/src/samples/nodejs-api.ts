@@ -1,13 +1,9 @@
-const {
-  ipcRenderer,
-  fs,
-  path,
-} = window;
+const { ipcRenderer, path } = window
 
 export default function () {
   // Use ipcRenderer.on
-  ipcRenderer.on('main-process-message', (_event, message) => {
-    const oDiv = document.getElementById('nodejs-api');
+  ipcRenderer.on('main-process-message', (_event, message: string) => {
+    const oDiv = document.getElementById('nodejs-api')
     // console.log('[Receive Main-process message]:', message)
     if (oDiv) {
       oDiv.innerHTML = `
@@ -15,9 +11,9 @@ export default function () {
         [IpcRenderer receive a Main-process message] ${message}
         <br/>
         <br/>
-        [path module] ${Object.keys(path)}
+        [path module] ${Object.keys(path).toString()}
       </code>
-      `;
+      `
     }
   })
 
@@ -29,5 +25,5 @@ export default function () {
     <h2>Node.js Api</h2>
     <div id="nodejs-api"></div>
   </div>
-  `;
+  `
 }

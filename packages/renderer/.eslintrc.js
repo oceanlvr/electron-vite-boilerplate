@@ -8,6 +8,7 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
     ecmaVersion: 'esnext',
+    createDefaultProgram: true
   },
   extends: ['plugin:vue/vue3-recommended'],
   // https://eslint.vuejs.org/rules/

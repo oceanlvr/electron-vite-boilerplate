@@ -8,8 +8,9 @@
     "node": ">=14.17.0"
   },
   "scripts": {
-    "dev": "node scripts/watch.mjs",
+    "typecheck": "vue-tsc --noEmit --p packages/renderer/tsconfig.json",
     "prebuild": "node scripts/build.mjs",
+    "dev": "node scripts/watch.mjs",
     "build": "electron-builder",
     "init": "git config core.hooksPath .git/hooks/ && rm -rf .git/hooks && npx simple-git-hooks",
     "test": "vitest",
@@ -24,6 +25,7 @@
     "@types/sqlite3": "^3.1.8",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",
+    "@vitejs/plugin-vue": "^2.3.1",
     "electron": "^17.1.2",
     "electron-builder": "^22.14.13",
     "eslint": "^8.12.0",
@@ -35,10 +37,14 @@
     "nano-staged": "^0.6.0",
     "node-fetch": "^3.2.3",
     "simple-git-hooks": "^2.7.0",
-    "typescript": "^4.6.2",
+    "typescript": "^4.6.3",
     "vite": "^2.8.6",
+    "vite-plugin-electron-renderer": "^0.3.2",
     "vite-plugin-esmodule": "^1.2.0",
-    "vitest": "^0.8.4"
+    "vite-plugin-resolve": "^2.0.1",
+    "vitest": "^0.8.4",
+    "vue": "^3.2.31",
+    "vue-tsc": "^0.33.9"
   },
   "env": {
     "VITE_DEV_SERVER_HOST": "127.0.0.1",

@@ -1,12 +1,12 @@
 import { app } from 'electron'
 import path from 'path'
-import { fileTypeFromFile } from 'file-type'
+import * as fileType from 'file-type'
 
-(async () => {
+void (async () => {
   const filename = app.isPackaged
     ? path.join(__dirname, '../renderer/vue.ico')
     : path.join(__dirname, '../../packages/renderer/public/vue.ico')
-  const fileType = await fileTypeFromFile(filename)
+  const fileInfo = await fileType.fileTypeFromFile(filename)
 
-  // console.log(fileType) // { ext: 'ico', mime: 'image/x-icon' }
+  console.log(fileInfo) // { ext: 'ico', mime: 'image/x-icon' }
 })()
