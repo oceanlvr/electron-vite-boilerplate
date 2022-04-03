@@ -22,7 +22,6 @@ module.exports = {
       },
     ],
     'vue/component-api-style': ['error', ['script-setup']],
-    semi: ['error', 'always'],
   },
   ignorePatterns: [
     'node_modules/**',
