@@ -22,7 +22,7 @@
   "devDependencies": {
     "@types/serialport": "^8.0.2",
     "@types/sqlite3": "^3.1.8",
-    "electron": "^17.1.2",
+    "electron": "^19.0.1",
     "electron-builder": "^22.14.13",
     "execa": "^6.1.0",
     "file-type": "^17.1.1",
